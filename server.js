@@ -15,5 +15,5 @@ MongoClient.connect(url, (err, db) => {
       data: JSON.parse(data)
     }})
     console.log("updated")
-  }, 10000)
+  }, 1800000)
 })
