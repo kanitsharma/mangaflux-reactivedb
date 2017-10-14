@@ -1,3 +1,4 @@
+const http = require('http')
 const MongoClient = require('mongodb').MongoClient
 
 const requestData = require('./utils/requestData')
@@ -17,3 +18,9 @@ MongoClient.connect(url, (err, db) => {
     console.log("updated")
   }, 1800000)
 })
+
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write('You have reached mangaflux-scraper');
+  res.end();
+}).listen(process.env.PORT || 5000);
