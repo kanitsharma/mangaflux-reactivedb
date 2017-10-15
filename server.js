@@ -12,8 +12,9 @@ MongoClient.connect(url, (err, db) => {
   const list = db.collection('list')
   setInterval(async () => {
     const data = await requestData(listURL)
+    const json = JSON.parse(data)
     list.update({ "db": true }, {$set: {
-      data: JSON.parse(data)
+      data: json.manga
     }})
     console.log("updated")
   }, 1800000)
