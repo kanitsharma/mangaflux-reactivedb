@@ -19,7 +19,7 @@ MongoClient.connect(url, (err, db) => {
       data: json.manga
     }})
     console.log("updated")
-  }, 10000)
+  }, 1800000)
 })
 
 http.createServer((req, res) => {
