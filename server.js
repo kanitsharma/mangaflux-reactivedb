@@ -27,5 +27,5 @@ http.createServer((req, res) => {
 }).listen(process.env.PORT || 5000)
 
 setInterval(() => {
-  http.get("http://<your app name>.herokuapp.com")
+  http.get("http://mangaflux-scraper.herokuapp.com/")
 }, 300000)
