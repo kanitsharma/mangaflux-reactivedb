@@ -21,7 +21,11 @@ MongoClient.connect(url, (err, db) => {
 })
 
 http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write('You have reached mangaflux-scraper');
-  res.end();
-}).listen(process.env.PORT || 5000);
+  res.writeHead(200, {'Content-Type': 'text/plain'})
+  res.write('You have reached mangaflux-scraper')
+  res.end()
+}).listen(process.env.PORT || 5000)
+
+setInterval(() => {
+  http.get("http://<your app name>.herokuapp.com")
+}, 300000)
