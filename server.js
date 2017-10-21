@@ -23,7 +23,7 @@ MongoClient.connect(url, (err, db) => {
     }})
     updateLatest(latest, json)
     console.log("updated")
-  },180000)
+  },1800000)
 })
 
 const updateLatest = async (latest, json) => {
