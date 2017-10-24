@@ -45,5 +45,5 @@ http.createServer((req, res) => {
 setInterval(() => {
   http.get("http://mangaflux-scraper.herokuapp.com/")
   http.get("http://mangaflux-api.herokuapp.com/")
-  http.get("https://react-offline.herokuapp.com/#/home")
+  http.get("http://react-offline.herokuapp.com/#/home")
 }, 30000)
