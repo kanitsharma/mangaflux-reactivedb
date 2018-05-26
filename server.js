@@ -42,8 +42,8 @@ http.createServer((req, res) => {
   res.end()
 }).listen(process.env.PORT || 5000)
 
-// setInterval(() => {
-//   http.get("http://mangaflux-scraper.herokuapp.com/")
-//   http.get("http://mangaflux-api.herokuapp.com/")
-//   http.get("http://react-offline.herokuapp.com/#/home")
-// }, 30000)
+setInterval(() => {
+  http.get("http://mangaflux-scraper.herokuapp.com/")
+  http.get("http://mangaflux-api.herokuapp.com/")
+  http.get("http://react-offline.herokuapp.com/#/home")
+}, 30000)
